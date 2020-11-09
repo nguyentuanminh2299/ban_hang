@@ -2,6 +2,7 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <style type="text/css" >
+	body{background: none;}
 	a.lk_1{font-size:22px;text-decoration:none;color:blue;margin-right:30px}
 	a.lk_1:hover {color:red}
 </style>
