@@ -19,6 +19,7 @@
 		<script src='phan_bo_tro/tinymce/js/tinymce/tinymce.min.js'></script>
 		<link rel="stylesheet" type="text/css" href="giao_dien/giao_dien.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	</head>
 	<body>
 		<?php 

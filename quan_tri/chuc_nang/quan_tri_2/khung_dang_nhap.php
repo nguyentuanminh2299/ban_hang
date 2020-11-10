@@ -7,11 +7,11 @@
 	<div class="login-box">
 		<h1>Login</h1>
 		<div class="textbox">
-			<i class="fas fa-user" aria-hidden="true"></i>
+			<i class="fa fa-user" aria-hidden="true"></i>
 			<input placeholder="Username" name="ky_danh" >
 		</div>
 		<div class="textbox">
-			<i class="fas fa-lock" aria-hidden="true"></i>
+			<i class="fa fa-lock" aria-hidden="true"></i>
 			<input type="password" placeholder="Password" name="mat_khau" >
 		</div>
 			<input type="hidden" name="dang_nhap_quan_tri" value="dang_nhap_quan_tri" >
