@@ -16,7 +16,8 @@
 ?>
 <table width="990px" class="tb_a1" >
 	<tr style="background:#CCFFFF;height:40px;" >
-		<td width="550px" ><b>Tên</b></td>
+		<td width="100px" align="center"><b>Tên</b></td>
+		<td width="500px" align="center">Hình ảnh</td>
 		<td align="center" width="220px" ><b>Sửa</b></td>
 		<td align="center" width="220px" ><b>Xóa</b></td>
 	</tr>
@@ -25,12 +26,18 @@
 		{
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten'];
+			$link_hinh="../hinh_anh/loai_san_pham/".$ten.".jpg";
 			$link_sua="?thamso=sua_menu_doc&id=".$id."&trang=".$_GET['trang'];
 			$link_xoa="?xoa_menu_doc=co&id=".$id;
 			?>
 				<tr class="a_1" >
-					<td>
+					<td align="center">
 						<a href="<?php echo $link_sua; ?>" class="lk_a1" ><?php echo $ten; ?></a>
+					</td>
+					<td align="center">
+						<a href="<?php echo $link_sua;?>">
+							<img src="<?php echo $link_hinh;?>">
+						</a>
 					</td>
 					<td align="center" >
 						<a href="<?php echo $link_sua; ?>" class="lk_a1" >Sửa</a>
@@ -43,7 +50,7 @@
 		}
 	?>
 	<tr>
-		<td colspan="3" align="center" >
+		<td colspan="4" align="center" >
 			<br>
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)

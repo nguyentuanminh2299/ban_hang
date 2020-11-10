@@ -67,10 +67,10 @@
 			include("chuc_nang/slideshow/sua_slideshow.php");
 		break;
 		case "sua_banner":
-			include("chuc_nang/banner/sua_banner.php");
+			// include("chuc_nang/banner/sua_banner.php");
 		break;
 		case "sua_footer":
-			include("chuc_nang/footer/sua_footer.php");
+			// include("chuc_nang/footer/sua_footer.php");
 		break;
 		case "them_quang_cao_trai":
 			include("chuc_nang/quang_cao_trai/them_quang_cao_trai.php");

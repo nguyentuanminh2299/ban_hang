@@ -22,9 +22,6 @@
 			<td valign="top" >Mật khẩu : </td>
 			<td >
 				<input type="password" style="width:400px;margin-top:3px;margin-bottom:3px;" name="mat_khau" value="khong_doi" ><br><br>
-				- Nếu chỉ muốn đổi ký danh thì chỉ cần sửa ký danh , còn phần mật khẩu thì để nguyên (mật khẩu sẽ không đổi khi gửi biểu mẫu) <br><br>
-				- Khi sửa thông tin quản trị mà thông tin mật khẩu nhập vào là 'khong_doi' thì thông tin mật khẩu vẫn giữ nguyên (nghĩa là mật khẩu cũ không đổi)
-				<br><br>
 			</td>
 		</tr>
 		

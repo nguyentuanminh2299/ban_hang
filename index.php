@@ -18,7 +18,7 @@
 		<title>Web bán hàng</title>
 		<link rel="stylesheet" type="text/css" href="giao_dien/giao_dien.css">
 	</head>
-	<body>
+	<body style="background-color: #f0f0f0">
 		<center>
 			<table width="990px">
 				<tr>
@@ -53,7 +53,7 @@
 					?>					
 					</td>
 				</tr>
-				<tr style="background-color: yellow">
+				<tr class="footer">
 					<td colspan="3"><?php include("chuc_nang/footer/footer.php"); ?></td>
 				</tr>
 			</table>

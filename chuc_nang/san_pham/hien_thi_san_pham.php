@@ -1,10 +1,10 @@
 <?php
 while($tv_2=mysqli_fetch_array($tv_1))
 	{
-		echo "<tr>";
+		echo "<tr class='sanpham'>";
 			for($i=1;$i<=3;$i++)
 			{
-				echo "<td align='center' width='215px' valign='top'>";
+				echo "<td class='sanphamq' align='center' width='215px' valign='top'>";
 					if($tv_2!=false)
 					{
 						$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
@@ -12,7 +12,7 @@ while($tv_2=mysqli_fetch_array($tv_1))
 						$gia=$tv_2['gia'];
 						$gia=number_format($gia,0,",",".");
 						echo "<a href='$link_chi_tiet'>";
-							echo "<div>";
+							echo "<div class='sanphaqm'>";
 								echo "<img src='$link_anh' width='150px' >";
 								echo "<br>";
 								echo "<br>";
@@ -24,6 +24,7 @@ while($tv_2=mysqli_fetch_array($tv_1))
 								echo "</div>";
 							echo "</div>";
 						echo "</a>";
+						echo "<br>";
 						echo "<br>";
 					}
 					else 
