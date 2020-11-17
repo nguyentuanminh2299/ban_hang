@@ -107,5 +107,4 @@
 		echo "Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ";
 		include("chuc_nang/gio_hang/bieu_mau_mua_hang.php");
 	}
-	
 ?>

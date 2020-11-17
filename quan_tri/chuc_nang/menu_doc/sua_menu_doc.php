@@ -7,7 +7,8 @@
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ten=$tv_2['ten'];
-	$link_hinh="../hinh_anh/loai_san_pham".$tv_2['hinh_anh'];
+	$ten_anh=$tv_2['hinh_anh'];
+	$link_hinh="../hinh_anh/loai_san_pham/".$tv_2['hinh_anh'];
 	$link_dong="?thamso=quan_ly_menu_doc&trang=".$_GET['trang'];
 ?>
 <form action="" method="post">
@@ -28,8 +29,9 @@
 			<td>Hình ảnh: </td>
 			<td>
 				<img src="<?php echo $link_hinh ?>">
-				<br>
-				<input type="file" name="">
+				<br><br>
+				<input type="file" name="hinh_anh" >
+				<input type="hidden" name="ten_anh" value="<?php echo $ten_anh; ?>" >
 			</td>
 		</tr>		
 		<tr>

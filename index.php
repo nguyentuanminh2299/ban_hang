@@ -16,6 +16,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Web bán hàng</title>
+		<script type="text/javascript">function plus(){
+	  							var a=document.getElementById("so_luong").value;
+	  							if(a>=0) a++;
+	  							document.getElementById("so_luong").value=a;
+	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  						}
+
+	  						function minus(){
+	  							var a=document.getElementById("so_luong").value;
+	  							if(a>=1) a--;
+	  							document.getElementById("so_luong").value=a;
+	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  						}
+	  	</script>
 		<link rel="stylesheet" type="text/css" href="giao_dien/giao_dien.css">
 	</head>
 	<body style="background-color: #f0f0f0">
