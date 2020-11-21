@@ -46,7 +46,7 @@
 		}
 	}
 	
-	echo "Giỏ hàng";
+	echo "<h1>Giỏ hàng</h1>";
 	echo "<br>";
 	echo "<br>";
 	if($gio_hang=="khong")
@@ -60,10 +60,10 @@
 		echo "<table>";
 			echo "<tr>";
 				echo "<td width='200px' >Tên</td>";
-				echo "<td width='200px' >Hình ảnh</td>";
-				echo "<td width='150px' >Số lượng</td>";
+				echo "<td width='150px' >Hình ảnh</td>";
+				echo "<td width='200px' align='center'>Số lượng</td>";
 				echo "<td width='150px' >Đơn giá</td>";
-				echo "<td width='170px' >Thành tiền</td>";
+				echo "<td width='200px' >Thành tiền</td>";
 			echo "</tr>";
 			$tong_cong=0;
 			for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
@@ -86,12 +86,30 @@
 					echo "<td>";
 					echo "<img src='$link' style='width: 60px'>";
 					echo "</td>";
-					echo "<td>";
+					echo "<td align='center'>";
+					echo "<input class='minus is-form' type='button' value='-' onclick='minus()'>";
+					echo "&nbsp;";
 					echo "<input type='hidden' name='".$name_id."' value='".$_SESSION['id_them_vao_gio'][$i]."' >";
-					echo "<input type='text' style='width:50px' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
+					echo "<input type='text' id='".$name_sl."' style='width:40' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
+					echo "<input class='plus is-form' type='button' value='+' onclick='plus()'>";
+					echo '<script type="text/javascript">
+	  						function plus_'.$i.'(){
+	  							var a=document.getElementById("'.$name_sl.'").value;
+	  							if(a>=0) a++;
+	  							document.getElementById("'.$name_sl.'").value=a;
+	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  						}
+
+	  						function minus_'.$i.'(){
+	  							var a=document.getElementById("so_luong").value;
+	  							if(a>=1) a--;
+	  							document.getElementById("so_luong").value=a;
+	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  						}
+	  						</script>';
 					echo "</td>";
-					echo "<td>".$tv_2['gia']."</td>";
-					echo "<td>".$tien."</td>";
+					echo "<td><p id='don_gia'>".number_format($tv_2['gia'],0,",",".")."</p></td>";
+					echo "<td><p id='thanh_tien'>".number_format($tien,0,",",".")."</p></td>";
 				echo "</tr>";
 				}
 			}	
@@ -104,7 +122,8 @@
 		echo "</table>";
 		echo "</form>";
 		echo "<br>";
-		echo "Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ";
+		echo "<p>Tổng giá trị đơn hàng là : ".number_format($tong_cong,0,",",".")." VNĐ</p>";
 		include("chuc_nang/gio_hang/bieu_mau_mua_hang.php");
 	}
+	
 ?>

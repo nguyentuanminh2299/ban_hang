@@ -5,7 +5,7 @@
 	a.lk_2{text-decoration:none;color:black;font-size:22px;line-height:30px;}
 	a.lk_2:hover{color:red;}
 </style>
-<table width="990px" >
+<table width="990px" class="menu">
 	<tr>
 		<td width="495px" valign="top" >
 			<a href="?thamso=them_menu_ngang" class="lk_2" >Thêm menu ngang</a><br>

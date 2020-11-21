@@ -6,14 +6,15 @@ a
 div.menu_ngang a 
 {
 	color:blue;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding: 10px;
 	text-decoration: none;
 	font-size:20px;
 }
 div.menu_ngang a:hover
 {
-	color:red
+	color:red;
+    background-color: aliceblue;
+    transition: 1s;
 }
 div.menu_doc a 
 {
@@ -107,4 +108,4 @@ div.gia
     -webkit-appearance:none;
     margin:0;
 }*/
-/* ]]> */</b:tag>
+/* ]]> */
