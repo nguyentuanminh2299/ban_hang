@@ -87,26 +87,26 @@
 					echo "<img src='$link' style='width: 60px'>";
 					echo "</td>";
 					echo "<td align='center'>";
-					echo "<input class='minus is-form' type='button' value='-' onclick='minus()'>";
+					// echo "<input class='minus is-form' type='button' value='-' onclick='minus()'>";
 					echo "&nbsp;";
 					echo "<input type='hidden' name='".$name_id."' value='".$_SESSION['id_them_vao_gio'][$i]."' >";
-					echo "<input type='text' id='".$name_sl."' style='width:40' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
-					echo "<input class='plus is-form' type='button' value='+' onclick='plus()'>";
-					echo '<script type="text/javascript">
-	  						function plus_'.$i.'(){
-	  							var a=document.getElementById("'.$name_sl.'").value;
-	  							if(a>=0) a++;
-	  							document.getElementById("'.$name_sl.'").value=a;
-	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
-	  						}
+					echo "<input type='text' id='".$name_sl."' max='99' onkeypress='return event.charCode >= 48 && event.charCode <= 57' min='0' style='width:40' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
+					// echo "<input class='plus is-form' type='button' value='+' onclick='plus()'>";
+					// echo '<script type="text/javascript">
+	  		// 				function plus_'.$i.'(){
+	  		// 					var a=document.getElementById("'.$name_sl.'").value;
+	  		// 					if(a>=0) a++;
+	  		// 					document.getElementById("'.$name_sl.'").value=a;
+	  		// 					document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  		// 				}
 
-	  						function minus_'.$i.'(){
-	  							var a=document.getElementById("so_luong").value;
-	  							if(a>=1) a--;
-	  							document.getElementById("so_luong").value=a;
-	  							document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
-	  						}
-	  						</script>';
+	  		// 				function minus_'.$i.'(){
+	  		// 					var a=document.getElementById("so_luong").value;
+	  		// 					if(a>=1) a--;
+	  		// 					document.getElementById("so_luong").value=a;
+	  		// 					document.getElementById("thanh_tien").innerHTML=a*document.getElementById("don_gia").innerHTML;
+	  		// 				}
+	  		// 				</script>';
 					echo "</td>";
 					echo "<td><p id='don_gia'>".number_format($tv_2['gia'],0,",",".")."</p></td>";
 					echo "<td><p id='thanh_tien'>".number_format($tien,0,",",".")."</p></td>";
