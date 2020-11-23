@@ -62,6 +62,14 @@ div.gia
 	background-color: white;
 }
 
+.sanpham:hover img{ /*add*/
+	padding-top: 10px;
+}
+
+.sanpham:hover .ten{ /*add*/
+	color: #6AADE0;
+}
+
 /*<b:tag name='style'>/* <![CDATA[ */*/
 .buttons_added {
     opacity:1;
