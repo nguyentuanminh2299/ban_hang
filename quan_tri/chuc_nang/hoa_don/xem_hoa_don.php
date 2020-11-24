@@ -10,6 +10,7 @@
 	$email=$tv_2['email'];
 	$dien_thoai=$tv_2['dien_thoai'];
 	$dia_chi=$tv_2['dia_chi'];
+	$ngay_mua=$tv_2['ngay_mua'];
 	$noi_dung=$tv_2['noi_dung'];
 	$hang_duoc_mua=$tv_2['hang_duoc_mua'];
 	$link_dong="?thamso=hoa_don&&trang=".$_GET['trang'];
@@ -90,7 +91,7 @@
 <br><br>
 <table width="990px" >
 	<tr>
-		<td width="180px" ><b style="color:blue;font-size:20px" >Thông tin người mua</b><br><br> </td>
+		<td width="250px" ><b style="color:blue;font-size:20px" >Thông tin người mua</b><br><br> </td>
 		<td width="810px" align="right" >
 			&nbsp;
 		</td>
@@ -117,6 +118,12 @@
 		<td valign="top" >Địa chỉ : </td>
 		<td >
 			<?php echo $dia_chi; ?>
+		</td>
+	</tr>
+	<tr height="30px" >
+		<td valign="top" >Ngày mua : </td>
+		<td >
+			<?php echo $ngay_mua; ?>
 		</td>
 	</tr>
 	<tr height="30px" >
