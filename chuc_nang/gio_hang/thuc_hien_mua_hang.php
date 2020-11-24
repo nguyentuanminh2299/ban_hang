@@ -16,7 +16,7 @@
 			for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
 			{
 				$hang_duoc_mua=$hang_duoc_mua.$_SESSION['id_them_vao_gio'][$i]."[|||]".$_SESSION['sl_them_vao_gio'][$i]."[|||||]";
-			}		
+			}
 			$tv="INSERT INTO hoa_don (
             id ,
             ten_nguoi_mua ,
@@ -37,7 +37,19 @@
             '$hang_duoc_mua',
             '$ngay_mua'
             );";
-			mysqli_query($conn,$tv);
+            mysqli_query($conn,$tv);
+            $tv="select id FROM hoa_don ORDER BY id DESC LIMIT 1";
+            $tv_1=mysqli_query($conn,$tv);
+			$tv_2=mysqli_fetch_array($tv_1);
+			$id_hoadon=$tv_2[0];
+            for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
+			{
+				$id_sp=$_SESSION['id_them_vao_gio'][$i];
+				$so_luong=$_SESSION['sl_them_vao_gio'][$i];
+				$tv="INSERT INTO chi_tiet_hoa_don VALUES($id_hoadon,$id_sp,$so_luong,150);";
+				mysqli_query($conn,$tv);
+			}
+			
 			unset($_SESSION['id_them_vao_gio']);
 			unset($_SESSION['sl_them_vao_gio']);
 			thong_bao_html_roi_chuyen_trang("Cảm ơn bạn đã mua hàng tại web site chúng tôi","index.php");
